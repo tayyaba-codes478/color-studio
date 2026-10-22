@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app">
+    <header>
+      <span class="tag">✦ CREATIVE SPACE</span>
+      <h1>Color Studio</h1>
+      <p>Discover, select and save your favorite colors.</p>
+    </header>
+
+    <section class="color-card">
+      <div id="colorBox" class="color-box"></div>
+
+      <div class="color-info">
+        <div>
+          <span class="label">CURRENT COLOR</span>
+          <h2 id="colorCode">#F3E8FF</h2>
+        </div>
+        <button id="copyBtn" class="icon-btn">📋 Copy</button>
+      </div>
+
+      <div class="actions">
+        <button id="changeBtn" class="primary-btn">
+          ✨ Generate Color
+        </button>
+        <button id="saveBtn" class="secondary-btn">
+          ♡ Save Favorite
+        </button>
+      </div>
+    </section>
+
+    <section class="palette-section">
+      <div class="section-heading">
+        <div>
+          <h2>Preset Palette 🎨</h2>
+          <p>Choose a color you love.</p>
+        </div>
+      </div>
+
+      <div id="presetPalette" class="preset-palette"></div>
+    </section>
+
+    
+<section class="harmony-section">
+  <div class="section-heading">
+    <div>
+      <h2>Color Harmony ✨</h2>
+      <p>Generate colors that work beautifully together.</p>
+    </div>
+  </div>
+
+  <div class="harmony-controls">
+    <label for="harmonyColor">Choose Base Color</label>
+    <input type="color" id="harmonyColor" value="#8B5CF6">
+
+    <label for="harmonyType">Harmony Style</label>
+    <select id="harmonyType">
+      <option value="complementary">Complementary</option>
+      <option value="analogous">Analogous</option>
+      <option value="triadic">Triadic</option>
+      <option value="split">Split Complementary</option>
+    </select>
+
+    <button id="generateHarmonyBtn" class="primary-btn">
+      ✨ Generate Harmony
+    </button>
+  </div>
+
+  <div id="harmonyPalette" class="preset-palette"></div>
+</section>
+
+    
+<section class="gradient-section">
+  <div class="section-heading">
+    <div>
+      <h2>Gradient Studio ✨</h2>
+      <p>Mix two colors to create a beautiful gradient.</p>
+    </div>
+  </div>
+
+  <div class="gradient-controls">
+    <div class="gradient-color">
+      <label for="gradientColor1">First Color</label>
+      <input type="color" id="gradientColor1" value="#C4B5FD">
+    </div>
+
+    <div class="gradient-color">
+      <label for="gradientColor2">Second Color</label>
+      <input type="color" id="gradientColor2" value="#FDA4AF">
+    </div>
+  </div>
+
+  <div id="gradientPreview" class="gradient-preview"></div>
+   
+<button id="randomGradientBtn" class="primary-btn">
+  🎲 Generate Random Gradient
+</button>
+
+<div class="gradient-direction-control">
+  <label for="gradientDirection">Gradient Direction</label>
+  <select id="gradientDirection">
+    <option value="135deg">↘ Diagonal</option>
+    <option value="90deg">→ Left to Right</option>
+    <option value="180deg">↓ Top to Bottom</option>
+    <option value="45deg">↗ Diagonal Reverse</option>
+    <option value="to left">← Right to Left</option>
+    <option value="to top">↑ Bottom to Top</option>
+  </select>
+</div>
+
+  <button id="copyGradientBtn" class="primary-btn">
+    📋 Copy Gradient CSS
+  </button>
+
+  <p id="gradientCode" class="gradient-code"></p>
+</section>
+
+
+<!-- Color History Section -->
+<section class="history-section">
+  <div class="section-heading">
+    <div>
+      <h2>Color History 🕘</h2>
+      <p>Your recently used colors.</p>
+    </div>
+
+    <button id="clearHistoryBtn" class="secondary-btn">
+      Clear History
+    </button>
+  </div>
+
+  <div id="colorHistory" class="color-history"></div>
+
+  <p id="historyEmpty" class="empty-message">
+    No color history yet. Generate or select a color!
+  </p>
+</section>
+
+
+<!-- Favorite Gradients Section -->
+<section class="favorite-gradients-section">
+  <div class="section-heading">
+    <div>
+      <h2>Favorite Gradients 💖</h2>
+      <p>Save your beautiful gradients for later.</p>
+    </div>
+    <span id="gradientFavoriteCount" class="count">0 gradients</span>
+  </div>
+
+  <button id="saveGradientBtn" class="secondary-btn">
+    ♡ Save Current Gradient
+  </button>
+
+  <div id="favoriteGradientsList" class="favorite-gradients-list"></div>
+
+  <p id="emptyGradientFavorites" class="empty-message">
+    No favorite gradients yet. Create one and save it!
+  </p>
+</section>
+
+    <section class="favorites-section">
+      <div class="section-heading">
+        <div>
+          <h2>My Favorites ♡</h2>
+          <p>Your personal color collection.</p>
+        </div>
+        <span id="favoriteCount" class="count">0 colors</span>
+      </div>
+
+    <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="🔍 Search saved colors..."
+/>
+
+      <div id="favoritesList" class="favorites-list"></div>
+
+    <button id="downloadPaletteBtn" class="primary-btn">
+     📥 Download My Palette
+    </button>
+
+      <p id="emptyMessage" class="empty-message">
+        No favorites yet. Select and save a color!
+      </p>
+    </section>
+
+    <footer>Made with ♡ and JavaScript</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
